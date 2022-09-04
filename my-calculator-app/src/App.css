@@ -76,12 +76,10 @@ body{
   border-radius: 10px;
 }
 
-.highlight {
+#AC, #cancel, #plusMin {
 background-color: rgb(232, 198, 232);
-border:1px;
 }
 
-.highlighter {
+#divide, #multiply, #minus, #plus, #equal {
   background-color: rgb(197, 126, 197);
-  border:1px;
   }

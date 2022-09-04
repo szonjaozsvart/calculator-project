@@ -5,7 +5,7 @@ function App() {
   const [result, setResult] = useState("");
 
   const handleClick = e => {
-    setResult(result.concat(e.target.name));
+    setResult(result.concat(e.target.className));
   }
   const handleAC = e => {
     setResult('');
@@ -34,25 +34,25 @@ function App() {
         <input className="result" type="text" value={result} />
       </form>
       <div className="buttons">
-        <button name='AC' id="AC" className="highlight" onClick={handleAC}>AC</button>
-        <button name='C'id="cancel" className="highlight" onClick={handleBackSpace}>C</button>
-        <button name='+/-' id="plusMin" className="highlight" onClick={handleAbsolute}>+/-</button>
-        <button name='/' id="divide" className="highlighter" onClick={handleClick}>&divide;</button>
-        <button name='7' id="seven" onClick={handleClick}>7</button>
-        <button name='8' id="eigth" onClick={handleClick}>8</button>
-        <button name='9' id="nine" onClick={handleClick}>9</button>
-        <button name='*' id="multiply"  className="highlighter" onClick={handleClick}>&times;</button>
-        <button name='4' id="four" onClick={handleClick}>4</button>
-        <button name='5' id="five" onClick={handleClick}>5</button>
-        <button name='6' id="six" onClick={handleClick}>6</button>
-        <button name='-' id="minus" className="highlighter" onClick={handleClick}>-</button>
-        <button name='1' id="one" onClick={handleClick}>1</button>
-        <button name='2' id="two" onClick={handleClick}>2</button>
-        <button name='3' id="three" onClick={handleClick}>3</button>
-        <button name='+' id="plus" className="highlighter" onClick={handleClick}>+</button>
-        <button name='0' id="zero" onClick={handleClick}>0</button>
-        <button name='.' id="dot" onClick={handleClick}>.</button>
-        <button name='=' id="equal" className="highlighter" onClick={handleResult}>=</button>
+        <button className='AC' id="AC" onClick={handleAC}>AC</button>
+        <button className='C'id="cancel" onClick={handleBackSpace}>C</button>
+        <button className='+/-' id="plusMin" onClick={handleAbsolute}>+/-</button>
+        <button className='/' id="divide" onClick={handleClick}>&divide;</button>
+        <button className='7' id="seven" onClick={handleClick}>7</button>
+        <button className='8' id="eigth" onClick={handleClick}>8</button>
+        <button className='9' id="nine" onClick={handleClick}>9</button>
+        <button className='*' id="multiply"  onClick={handleClick}>&times;</button>
+        <button className='4' id="four" onClick={handleClick}>4</button>
+        <button className='5' id="five" onClick={handleClick}>5</button>
+        <button className='6' id="six" onClick={handleClick}>6</button>
+        <button className='-' id="minus" onClick={handleClick}>-</button>
+        <button className='1' id="one" onClick={handleClick}>1</button>
+        <button className='2' id="two" onClick={handleClick}>2</button>
+        <button className='3' id="three" onClick={handleClick}>3</button>
+        <button className='+' id="plus" onClick={handleClick}>+</button>
+        <button className='0' id="zero" onClick={handleClick}>0</button>
+        <button className='.' id="dot" onClick={handleClick}>.</button>
+        <button className='=' id="equal" onClick={handleResult}>=</button>
       </div>
     </div>
   );
