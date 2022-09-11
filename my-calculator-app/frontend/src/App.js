@@ -28,10 +28,34 @@ function App() {
     }
   }
 
+  const saveIt = async(e) => {
+    const response = await fetch('http://localhost:3001/', {
+      method: 'post',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({result}),
+  });
+    const body = await response.json();
+    setResult('')
+  }
+
+  const handleMemory = async(e) => {
+    const response = await fetch('http://localhost:3001/', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const body = await response.json();
+    const savedData = body.savedNumber;
+      setResult(result+savedData);
+  }
+
   return (
     <div className="wrapper">
       <form>
-        <input className="result" type="text" value={result} />
+        <input className="result" type="text" value={result}/>
       </form>
       <div className="buttons">
         <button className='AC' id="AC" onClick={handleAC}>AC</button>
@@ -53,6 +77,8 @@ function App() {
         <button className='0' id="zero" onClick={handleClick}>0</button>
         <button className='.' id="dot" onClick={handleClick}>.</button>
         <button className='=' id="equal" onClick={handleResult}>=</button>
+        <button className='Save' id="save" onClick={saveIt}>Save</button>
+        <button className='Memory' id="memory" onClick={handleMemory}>Memory</button>
       </div>
     </div>
   );
