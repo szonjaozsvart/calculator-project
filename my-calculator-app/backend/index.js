@@ -18,7 +18,6 @@ app.get('/', (req, res) => {
   });
   
   app.post('/', (req,res)=>{
-    console.log(req.body.result);
   if(req.body.result.length === 0){
     res.status(200).json({
       "res":"no changes"
